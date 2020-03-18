@@ -35,6 +35,7 @@ public class Menu {
                         case '1':
                             System.out.println("Anna alkion sisältö (merkkijono)");
                             data = new String(Lue.rivi());
+                            System.out.println(data);
                             s.push(data);
                             break;
                         case '2':
