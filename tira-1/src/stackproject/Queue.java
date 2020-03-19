@@ -1,6 +1,5 @@
 package stackproject;
 
-
 /**
  * @author jessevaa
  */
@@ -9,8 +8,9 @@ class Queue {
     private ListItem back = null;
 
     private boolean isEmpty() {
-        return front == null && back == null;
+        return front == null;
     }
+
 
     void push(String aData) {
         if (isEmpty()) {
@@ -24,12 +24,10 @@ class Queue {
     }
 
     ListItem pop() {
-        ListItem cp = front;
-        if (!isEmpty()) {
-            assert front != null;
-            front = front.getNext();
-        }
-        return cp;
+        if (isEmpty()) return null;
+        ListItem r = front;
+        front = front.getNext();
+        return r;
     }
 
     void printItems() {
