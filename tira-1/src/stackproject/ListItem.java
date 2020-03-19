@@ -6,32 +6,36 @@
 package stackproject;
 
 /**
- *
  * @author kamaj
  */
-public class ListItem {
+class ListItem {
     private String data;
     private ListItem next;
 
-    public ListItem() {
+    ListItem() {
         next = null;
     }
-    public String getData() {
-        return data;
-    }
 
-    public void setData(String data) {
+    ListItem(String data) {
+        next = null;
         this.data = data;
     }
 
-    public ListItem getNext() {
+    String getData() {
+        return data;
+    }
+
+    void setData(String data) {
+        this.data = data;
+    }
+
+    ListItem getNext() {
         return next;
     }
 
-    public void setNext(ListItem next) {
+    void setNext(ListItem next) {
         this.next = next;
     }
-    
-    
-    
+
+
 }

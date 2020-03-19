@@ -1,34 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package stackproject;
 
 /**
- *
- * @author kamaj
+ * @author jessevaa
  */
-public class Stack {
-    
+class Stack {
+
     private ListItem top = null;
     private int size = 0;
 
     // muodosta uusi lista-alkio ja vie se pinon huipulle
-    public void push(String aData){
+    void push(String aData) {
         ListItem item = new ListItem();
         item.setData(aData);
         item.setNext(top);
         top = item;
-        size = size+1;
+        size = size + 1;
     }
-    // poista ja palauta alkio pinon huipulta, 
+
+    // poista ja palauta alkio pinon huipulta,
     // jos pino tyhjä palauta null
-    public ListItem pop(){
+    ListItem pop() {
         if (size >= 1) {
             ListItem deleted = top;
             top = top.getNext();
-            size = size-1;
+            size = size - 1;
             return deleted;
         } else {
             return null;
@@ -36,7 +31,7 @@ public class Stack {
     }
 
     // tulosta pinon sisältö muuttamatta pinoa
-    public void printItems() {
+    void printItems() {
         ListItem helper = top;
         if (top != null) {
             do {
@@ -48,8 +43,8 @@ public class Stack {
         }
     }
 
-    public int getSize() {
+    int getSize() {
         return size;
     }
-    
+
 }
