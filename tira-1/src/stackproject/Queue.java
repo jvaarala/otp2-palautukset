@@ -18,7 +18,7 @@ class Queue {
         } else {
             ListItem i = new ListItem(aData);
             back.setNext(i);
-            back = back.getNext();
+            back = i;
         }
 
     }
@@ -38,7 +38,7 @@ class Queue {
                 helper = helper.getNext();
             } while (helper != null);
         } else {
-            System.out.println("Pino on tyhjä!");
+            System.out.println("Ei alkioita!");
         }
     }
 

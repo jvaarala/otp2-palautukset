@@ -42,7 +42,7 @@ public class Menu {
                 case '2':
                     ListItem item = tietorakenne.pop();
                     if (item == null)
-                        System.out.println("Pino on tyhjä");
+                        System.out.println("Ei alkioita!");
                     else
                         System.out.println("Poistettu alkio: " + item.getData());
                     break;
