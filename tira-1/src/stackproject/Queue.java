@@ -6,6 +6,7 @@ package stackproject;
 class Queue {
     private ListItem front = null;
     private ListItem back = null;
+    private int size = 0;
 
     private boolean isEmpty() {
         return front == null;
@@ -20,38 +21,26 @@ class Queue {
             back.setNext(i);
             back = i;
         }
-
+        size++;
     }
 
     ListItem pop() {
         if (isEmpty()) return null;
         ListItem r = front;
         front = front.getNext();
+        size--;
         return r;
     }
 
     void printItems() {
         ListItem helper = front;
-        if (front != null) {
-            do {
-                System.out.println(helper.getData());
-                helper = helper.getNext();
-            } while (helper != null);
-        } else {
-            System.out.println("Ei alkioita!");
+        for(int i = 0; i < size; i++) {
+            System.out.println(helper.getData());
+            helper = helper.getNext();
         }
     }
 
     int getSize() {
-        int counter = 0;
-        ListItem helper = front;
-        if (front != null) {
-            do {
-                helper = helper.getNext();
-                counter++;
-            } while (helper != null);
-        }
-
-        return counter;
+        return size;
     }
 }
