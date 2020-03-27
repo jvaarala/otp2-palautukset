@@ -19,7 +19,7 @@ import java.nio.file.Paths;
 
 /**
  *
- * @author kamaj
+ * @author kamaj /jessevaa
  */
 import java.util.ArrayList;
 import java.util.Arrays;
