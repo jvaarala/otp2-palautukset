@@ -9,8 +9,6 @@ public class ClockTimer extends Subject {
 
 
     private int counter;
-    private int second;
-    private int thousands;
 
     public int getSecond() {
         return (counter / 1000)%60;
