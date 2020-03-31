@@ -32,13 +32,10 @@ public class Main {
                 case 2:
                     System.out.println("Anna alkion indeksi (kokonaisluku)");
                     data = Lue.kluku();
-                    if (data == null)
-                        System.out.println("Ei alkioita!");
-                    else
-                        arrayAuthDec.delete(data);
+                    arrayAuthDec.remove(data);
                     break;
                 case 3:
-                    ArrayList<Integer> temp = arrayAuthDec.get();
+                    ArrayList temp = arrayAuthDec.get();
                     System.out.println(Arrays.deepToString(temp.toArray()));
                     break;
                 case 4:

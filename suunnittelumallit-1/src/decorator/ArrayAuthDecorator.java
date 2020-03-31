@@ -1,7 +1,5 @@
 package decorator;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 import java.util.ArrayList;
 
 public class ArrayAuthDecorator {
@@ -25,7 +23,7 @@ public class ArrayAuthDecorator {
         }
     }
 
-    public void delete(Integer index) {
+    public void remove(Integer index) {
         System.out.println("Anna salasana ja paina ENTER");
         salasana = Lue.rivi();
         if (salasana.equals(tietokannastaHaettuHashattuSalasana)) {
