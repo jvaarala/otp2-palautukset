@@ -1,15 +1,15 @@
 package memento;
 
-public class Arvuuttaja {
+class Arvuuttaja {
 
-    public Arvuuttaja() {
+    Arvuuttaja() {
     }
 
-    public Object liityPeliin(Asiakas asiakas) {
+    Object liityPeliin(Asiakas asiakas) {
         return new Memento((int) (1+Math.random() * 10), asiakas);
     }
 
-    public void arvaa(Object memento, int arvaus) {
+    void arvaa(Object memento, int arvaus) {
         Memento m = (Memento) memento;
         if(m.MYSTEERILUKU == arvaus) {
             m.ASIAKAS.setOikeinArvattu(false);

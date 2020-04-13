@@ -2,16 +2,16 @@ package memento;
 
 public class Asiakas extends Thread {
 
-    Object memento;
-    Arvuuttaja arvuuttaja;
+    private Object memento;
+    private Arvuuttaja arvuuttaja;
 
-    public void setOikeinArvattu(boolean oikeinArvattu) {
+    void setOikeinArvattu(boolean oikeinArvattu) {
         this.oikeinArvattu = oikeinArvattu;
     }
 
-    public volatile boolean oikeinArvattu = false;
+    volatile boolean oikeinArvattu = false;
 
-    public Asiakas(Arvuuttaja a) {
+    Asiakas(Arvuuttaja a) {
         this.arvuuttaja = a;
     }
 

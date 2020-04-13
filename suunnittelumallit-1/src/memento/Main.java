@@ -8,5 +8,6 @@ public class Main {
             Asiakas asiakas = new Asiakas(r);
             asiakas.start();
         }
+
     }
 }
