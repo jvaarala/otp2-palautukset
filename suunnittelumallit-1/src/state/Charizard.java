@@ -13,4 +13,9 @@ public class Charizard extends State {
     @Override
     public void onEvolve() {
     }
+
+    @Override
+    public void accept(ExperienceVisitor experienceVisitor) {
+        experienceVisitor.visit(this);
+    }
 }

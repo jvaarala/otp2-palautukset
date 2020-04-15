@@ -2,7 +2,7 @@ package state;
 
 public class Charmander extends State {
 
-    Charmander(Pokemon pokemon) {
+    public Charmander(Pokemon pokemon) {
         super(pokemon);
     }
 
@@ -15,5 +15,10 @@ public class Charmander extends State {
     public void onEvolve() {
         pokemon.changeState(new Charmaleon(pokemon));
         System.out.println("Charmander evolved to Charmaleon!");
+    }
+
+    @Override
+    public void accept(ExperienceVisitor experienceVisitor) {
+        experienceVisitor.visit(this);
     }
 }

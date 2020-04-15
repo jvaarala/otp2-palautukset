@@ -18,4 +18,7 @@ public class Pokemon {
     public void attack() {
         this.state.onAttack();
     }
+
+    public void bonus(ExperienceVisitor visitor) { this.state.accept(visitor);}
+
 }

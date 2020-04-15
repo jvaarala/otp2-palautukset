@@ -10,4 +10,5 @@ public abstract class State {
 
     public abstract void onEvolve();
 
+    public abstract void accept(ExperienceVisitor experienceVisitor);
 }

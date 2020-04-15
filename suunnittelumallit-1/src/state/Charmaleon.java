@@ -15,4 +15,9 @@ public class Charmaleon extends State {
         pokemon.changeState(new Charizard(pokemon));
         System.out.println("Charmaleon evolved to Charizard!");
     }
+
+    @Override
+    public void accept(ExperienceVisitor experienceVisitor) {
+        experienceVisitor.visit(this);
+    }
 }
