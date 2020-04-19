@@ -21,6 +21,9 @@ public class Node {
     public String getData() {
         return data;
     }
+    public void setData(String data) {
+        this.data = data;
+    }
     public BinaryTree left() {
         return left;
     }

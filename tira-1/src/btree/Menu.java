@@ -1,10 +1,7 @@
 package btree;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
- * @author kamaj
+ * @author kamaj / jessevaa
  */
 public class Menu {
     //main alkaa-----------------------------------------------------------------------------
@@ -21,9 +18,12 @@ public class Menu {
         BinaryTree tree = new BinaryTree();
 
         tree.insert("d");
+        tree.insert("b");
         tree.insert("a");
         tree.insert("c");
         tree.insert("f");
+        tree.insert("e");
+        tree.insert("h");
         tree.insert("g");
 
         String data;
@@ -32,23 +32,25 @@ public class Menu {
             System.out.println("\n\t\t\t1. Lisää avain.");
             System.out.println("\t\t\t2. Etsi avaimella.");
             System.out.println("\t\t\t3. Käy puu läpi esijärjestyksessä.");
-            System.out.println("\t\t\t4. Tulosta puu.");
+            System.out.println("\t\t\t4. Poista avain.");
+            System.out.println("\t\t\t5. Etsi pienin avain.");
             System.out.println("\t\t\t0. lopetus ");
             System.out.print("\n\n"); // tehdään tyhjiä rivejä
             select = Lue.merkki();
             switch (select) {
                 case '1':
                     System.out.println("Anna uusi avain (merkkijono)");
-                    data = new String(Lue.rivi());
+                    data = Lue.rivi();
                     tree.insert(data);
                     break;
                 case '2':
                     System.out.println("Anna etsittävä avain (merkkijono)");
                     data = Lue.rivi();
+                    System.out.println("Aloitetaan etsintä:");
                     if (tree.find(data) != null) {
-                        System.out.println("Avain löytyi.");
+                        System.out.println("\nAvain löytyi.");
                     } else
-                        System.out.println("Avainta ei löytynyt.");
+                        System.out.println("\nAvainta ei löytynyt.");
 
                     break;
                 case '3':
@@ -56,9 +58,15 @@ public class Menu {
                     char h = Lue.merkki(); // pysäytetään kontrolli
                     break;
                 case '4':
-
-
-
+                    System.out.println("Anna poistettava avain (merkkijono)");
+                    data = Lue.rivi();
+                    if (tree.deleteNode(tree, data) != null) {
+                        System.out.println("\nAvain poistettu.");
+                    }
+                    break;
+                case '5':
+                    System.out.println("Etsitään pienin avain.");
+                    tree.getSmallest(tree);
                     break;
                 case '0':
                     break;
