@@ -77,7 +77,7 @@ public class BinaryTree {
 
     public void preOrder() {
         if (root != null) {
-            System.out.println(root.getData() + ',');
+            System.out.print(root.getData() + ',');
             if (root.left() != null) // pääseeekö vasemmalle?
                 root.left().preOrder();
             if (root.right() != null) // pääseekö oikealle?
