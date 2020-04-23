@@ -31,7 +31,7 @@ public class Menu {
 
             System.out.println("\n\t\t\t1. Lisää avain.");
             System.out.println("\t\t\t2. Etsi avaimella.");
-            System.out.println("\t\t\t3. Käy puu läpi esijärjestyksessä.");
+            System.out.println("\t\t\t3. Käy puu läpi sisäjärjestyksessä.");
             System.out.println("\t\t\t4. Poista avain.");
             System.out.println("\t\t\t5. Etsi pienin avain.");
             System.out.println("\t\t\t0. lopetus ");
@@ -54,7 +54,7 @@ public class Menu {
 
                     break;
                 case '3':
-                    tree.preOrder();
+                    tree.inOrder();
                     char h = Lue.merkki(); // pysäytetään kontrolli
                     break;
                 case '4':
