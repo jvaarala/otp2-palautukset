@@ -37,7 +37,7 @@ public class UsingJCAPI {
 //        printWithIterator(cardUsers);
 
         System.out.println("\nJärjestetään matkustajan numeron mukaan käyttämällä Lambda-lauseketta\n");
-        cardUsers.sort((TrafficCard o1, TrafficCard o2) -> Float.compare(o1.mBalance, o2.mBalance));
+        cardUsers.sort((TrafficCard o1, TrafficCard o2) -> Float.compare(o1.mTravellerNumber, o2.mTravellerNumber));
         printWithIterator(cardUsers);
 
         System.out.println("\nJärjestetään tilin balanssin mukaan käyttämällä Comparatoria\n" + balanceComparator + "\n");
